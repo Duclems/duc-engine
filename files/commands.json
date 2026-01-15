@@ -1,0 +1,97 @@
+{
+  "commands": {
+    "global": {
+      "planning": {
+        "response": "Tous les jours : 18h30 ~ 21h30",
+        "description": "Planning des streams"
+      },
+      "youtube": {
+        "response": "https://www.youtube.com/@duclems",
+        "description": "Chaine YouTube"
+      },
+      "tiktok": {
+        "response": "https://www.tiktok.com/@duclems",
+        "description": "Chaine TikTok"
+      },
+      "discord": {
+        "response": "https://discord.com/invite/fnfjpz9r26",
+        "description": "Serveur Discord"
+      },
+      "list": {
+        "response": "auto",
+        "description": "Affiche la liste de toutes les commandes globales disponibles"
+      },
+      "liste": {
+        "response": "auto",
+        "description": "Affiche la liste de toutes les commandes globales disponibles"
+      },
+      "zeldafinis": {
+        "response": "EOW • OOT • MM • WW • TP • PH • ST • SS • MC • BW • Z1 • Z2 • AW",
+        "description": "Liste des jeux Zelda que j'ai finis"
+      },
+      "classementzelda": {
+        "response": "[1] : OOT - TP • [2] : SS • BW • [3] : WW - MM • [4] : MC - AW • [5] : EOW • [6] : ST - PH • [7] : Z1",
+        "description": "Liste des jeux Zelda que j'ai finis"
+      },
+      "prochainzelda": {
+        "response": "Tears Of The Kingdom",
+        "description": "Prochain zelda en stream"
+      },
+      "zeldaliste": {
+        "response": "[1] : Four Swords Adventure • Link's to the past • Oracle of seasons • Oracle of ages • Triforce heroes [2] : Tear Of The Kingdom",
+        "description": "Liste des jeux Zelda pas encore fais en stream"
+      },
+      "lurk": {
+        "response": "random",
+        "description": "Envoi un message de remerciement pour le lurk",
+        "randomResponses": [
+          "Merci $(display_name) pour ton lurk grand fou !",
+          "Merci $(display_name) pour le lurk, héros du temps !",
+          "Que la Triforce veille sur ton lurk $(display_name) !",
+          "Telle une fée, ton lurk m'assiste $(display_name) !",
+          "Merci $(display_name) pour le lurk, un héros du temps dans l'ombre 🌚",
+          "Tu me laisses ton lurk comme on laisse un potit quart de coeur $(display_name) duclemLove",
+          "Lurky lurk, vers Hyrule tu marques un point $(display_name) !",
+          "Merci $(display_name) pour le lurk, en mode Sheikah ? 👁️",
+          "\"Hey, listen !\" merci pour ton lurk duclemLink",
+          "Merci $(display_name) pour le lurk, élu de la Master Lurk !",
+          "Merci $(display_name) pour le lurk, vaillant(e) porteur(se) de tunique verte !",
+          "Le temple du lurk t'ouvre ses portes $(display_name) !",
+          "Merci $(display_name) pour le lurk, mon p'tit kokiri pamiet1HEHE",
+          "Lurker dans l'ombre, mais la lumière d'hyrule reviendra $(display_name) !",
+          "Merci $(display_name) pour le lurk, grand sage silencieux !",
+          "Un lurk de ta part, c'est comme un coffre de quart de coeur $(display_name) duclemLove",
+          "Merci $(display_name) pour ton lurk… tu vas sauver Hyrule pendant ce temps ? 😏"
+        ]
+      },
+      "of": {
+        "response": "https://onlyfans.com/duclems",
+        "description": "Lien vers OnlyFans"
+      }
+    },
+    "moderator": {
+      "so": {
+        "response": "random",
+        "description": "Faire un shoutout à un utilisateur (modérateurs uniquement)",
+        "requiresArgs": true,
+        "randomResponses": [
+          "Allez faire un tour chez $(args), c'est un(e) super streamer(euse) ! duclemLove",
+          "Checkez $(args), vous ne le/la regretterez pas ! duclemLink",
+          "Un gros shoutout à $(args), allez lui faire un coucou ! pamiet1HEHE",
+          "$(args) mérite votre attention, allez voir son contenu ! duclemLove",
+          "Shoutout à $(args), un(e) streamer(euse) de qualité ! duclemLink",
+          "N'hésitez pas à aller voir $(args), c'est du bon contenu ! pamiet1HEHE",
+          "Un petit coucou à $(args), allez lui montrer votre support ! duclemLove",
+          "Checkez $(args), vous allez adorer son contenu ! duclemLink",
+          "Shoutout à $(args), un(e) streamer(euse) à découvrir ! pamiet1HEHE",
+          "Allez faire un tour chez $(args), c'est un(e) streamer(euse) génial(e) ! duclemLove",
+          "Un gros merci à $(args) pour son contenu de qualité ! duclemLink",
+          "Checkez $(args), vous ne serez pas déçu(e)s ! pamiet1HEHE",
+          "Shoutout à $(args), allez lui faire un coucou ! duclemLove",
+          "$(args) mérite votre support, allez voir son stream ! duclemLink",
+          "Un petit shoutout à $(args), un(e) streamer(euse) à suivre ! pamiet1HEHE"
+        ]
+      }
+    }
+  }
+}

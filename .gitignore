@@ -1,0 +1,27 @@
+# Dépendances
+node_modules/
+package-lock.json
+
+# Fichiers de tokens et authentification
+.twitch-tokens.json
+.env
+*.env
+
+# Fichiers d'état
+.engine-state.json
+.cooldown-state.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

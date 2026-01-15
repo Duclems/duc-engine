@@ -1,0 +1,24 @@
+{
+  "poll": [
+    {
+      "question": "Burger ou Smash Burger ?",
+      "status": false
+    },
+    {
+      "question": "ça fait combien de temps que j'ai pas live ?",
+      "status": false
+    },
+    {
+      "question": "Mario Galaxy ou Mario Odyssey ?",
+      "status": false
+    },
+    {
+      "question": "Smash or Pass Zelda (vous me donnez des perso et jvous dis)",
+      "status": true
+    },
+    {
+      "question": "Combien de continents existe-t-il sur Terre ?",
+      "status": false
+    }
+  ]
+}

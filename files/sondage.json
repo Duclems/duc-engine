@@ -1,0 +1,100 @@
+{
+  "poll": [
+    {
+      "question": "Quelle est la capitale de la France ?",
+      "status": true,
+      "answers": [
+        "Paris",
+        "Lyon",
+        "Marseille",
+        "Bordeaux"
+      ]
+    },
+    {
+      "question": "Combien font 2 + 2 ?",
+      "status": true,
+      "answers": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "question": "De quelle couleur est le ciel par temps clair ?",
+      "status": true,
+      "answers": [
+        "Bleu",
+        "Vert",
+        "Rouge"
+      ]
+    },
+    {
+      "question": "Quel est l’animal considéré comme le roi de la jungle ?",
+      "status": true,
+      "answers": [
+        "Lion",
+        "Tigre",
+        "Éléphant",
+        "Guépard"
+      ]
+    },
+    {
+      "question": "Combien de continents existe-t-il sur Terre ?",
+      "status": true,
+      "answers": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "question": "Quel est le plus grand océan du monde ?",
+      "status": true,
+      "answers": [
+        "Atlantique",
+        "Pacifique",
+        "Indien"
+      ]
+    },
+    {
+      "question": "Quelle est la langue officielle du Brésil ?",
+      "status": true,
+      "answers": [
+        "Portugais",
+        "Espagnol",
+        "Français"
+      ]
+    },
+    {
+      "question": "Quel est le plus grand désert chaud du monde ?",
+      "status": true,
+      "answers": [
+        "Sahara",
+        "Gobi",
+        "Kalahari",
+        "Mojave"
+      ]
+    },
+    {
+      "question": "Quelle planète est surnommée la planète rouge ?",
+      "status": true,
+      "answers": [
+        "Mars",
+        "Vénus",
+        "Jupiter",
+        "Saturne"
+      ]
+    },
+    {
+      "question": "Quel est l’instrument ?",
+      "status": true,
+      "answers": [
+        "Piano",
+        "Guitare",
+        "Violoncelle",
+        "Flûte"
+      ]
+    }
+  ]
+}
