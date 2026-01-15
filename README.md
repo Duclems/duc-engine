@@ -1,4 +1,4 @@
-# Duc-API
+# duc-engine
 
 CLI API pour créer des polls Twitch avec gestion des questions depuis un fichier JSON.
 
