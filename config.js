@@ -6,7 +6,7 @@ export const config = {
   twitch: {
     clientId: process.env.TWITCH_CLIENT_ID || 'uiuvz5c2cwt1vwcgzb8k6pcw3gv88v',
     clientSecret: process.env.TWITCH_CLIENT_SECRET || 'bjecl8alfg12ozk5m34p3diy1ifj6h',
-    redirectUri: 'http://localhost:3000/auth/callback',
+    redirectUri: 'http://localhost:3002/auth/callback',
     scopes: [
       'channel:manage:polls',
       'channel:read:polls',
@@ -33,5 +33,5 @@ export const config = {
     refreshThresholdHours: 24,        // Rafraîchir si moins de 24h restantes
     saveInterval: 60 * 60 * 1000      // Sauvegarder les tokens toutes les heures
   },
-  port: process.env.PORT || 3000
+  port: process.env.PORT || 3002
 };

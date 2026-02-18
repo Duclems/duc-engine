@@ -1,16 +1,13 @@
 {
   "name": "duc-api",
   "version": "1.0.0",
-  "description": "CLI API pour créer des polls Twitch avec gestion des questions",
+  "description": "CLI API pour interagir avec Twitch (auth, rewards, commandes de chat, API)",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
-    "sondages": "node index.js sondages",
-    "poll": "node index.js poll",
     "auth": "node index.js auth",
-    "polls": "node index.js polls",
     "rewards": "node index.js rewards",
     "create-reward": "node index.js create-reward",
     "commands": "node index.js commands",

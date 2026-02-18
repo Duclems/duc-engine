@@ -85,10 +85,11 @@ class CommandManager {
    */
   async addCommand(commandName, response, description = '', isModerator = false) {
     const commandType = isModerator ? 'moderator' : 'global';
-    
+    const existing = this.commands[commandType][commandName] || {};
     this.commands[commandType][commandName] = {
       response: response,
-      description: description
+      description: description,
+      hideFromList: existing.hideFromList === true
     };
     
     await this.saveCommands();

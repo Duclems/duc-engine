@@ -5,7 +5,7 @@ import url from 'url';
  * Serveur temporaire pour capturer le code d'autorisation Twitch
  */
 export class AuthServer {
-  constructor(port = 3000) {
+  constructor(port = 3002) {
     this.port = port;
     this.server = null;
     this.authPromise = null;

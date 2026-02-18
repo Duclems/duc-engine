@@ -2,48 +2,42 @@
   "commands": {
     "global": {
       "planning": {
-        "response": "Tous les jours : 18h30 ~ 21h30",
-        "description": "Planning des streams"
-      },
-      "youtube": {
-        "response": "https://www.youtube.com/@duclems",
-        "description": "Chaine YouTube"
+        "response": "Tous les jours : 18h30 ~ 21h30"
       },
       "tiktok": {
-        "response": "https://www.tiktok.com/@duclems",
-        "description": "Chaine TikTok"
+        "response": "https://www.tiktok.com/@duclems"
       },
       "discord": {
-        "response": "https://discord.com/invite/fnfjpz9r26",
-        "description": "Serveur Discord"
+        "response": "https://discord.com/invite/fnfjpz9r26"
       },
       "list": {
         "response": "auto",
-        "description": "Affiche la liste de toutes les commandes globales disponibles"
+        "hideFromList": true
       },
       "liste": {
         "response": "auto",
-        "description": "Affiche la liste de toutes les commandes globales disponibles"
+        "hideFromList": true
       },
       "zeldafinis": {
-        "response": "EOW • OOT • MM • WW • TP • PH • ST • SS • MC • BW • Z1 • Z2 • AW",
-        "description": "Liste des jeux Zelda que j'ai finis"
+        "response": "EOW • OOT • MM • WW • TP • PH • ST • SS • MC • BW • Z1 • Z2 • AW • BOTW"
       },
       "classementzelda": {
-        "response": "[1] : OOT - TP • [2] : SS • BW • [3] : WW - MM • [4] : MC - AW • [5] : EOW • [6] : ST - PH • [7] : Z1",
-        "description": "Liste des jeux Zelda que j'ai finis"
+        "response": "[1] : OOT - TP • [2] : SS • BW • [3] : WW - MM • [4] : MC - AW • [5] : BOTW - EOW • [6] : ST - PH • [7] : Z1 - Z2"
       },
       "prochainzelda": {
-        "response": "Tears Of The Kingdom",
-        "description": "Prochain zelda en stream"
+        "response": "Tears Of The Kingdom"
       },
       "zeldaliste": {
-        "response": "[1] : Four Swords Adventure • Link's to the past • Oracle of seasons • Oracle of ages • Triforce heroes [2] : Tear Of The Kingdom",
-        "description": "Liste des jeux Zelda pas encore fais en stream"
+        "response": "[1] : Four Swords Adventure • Oracle of seasons • Oracle of ages • Triforce heroes [2] : Tear Of The Kingdom"
+      },
+      "anniv": {
+        "response": "auto"
+      },
+      "monanniv": {
+        "response": "auto"
       },
       "lurk": {
         "response": "random",
-        "description": "Envoi un message de remerciement pour le lurk",
         "randomResponses": [
           "Merci $(display_name) pour ton lurk grand fou !",
           "Merci $(display_name) pour le lurk, héros du temps !",
@@ -61,18 +55,110 @@
           "Lurker dans l'ombre, mais la lumière d'hyrule reviendra $(display_name) !",
           "Merci $(display_name) pour le lurk, grand sage silencieux !",
           "Un lurk de ta part, c'est comme un coffre de quart de coeur $(display_name) duclemLove",
-          "Merci $(display_name) pour ton lurk… tu vas sauver Hyrule pendant ce temps ? 😏"
+          "Merci $(display_name) pour ton lurk… tu vas sauver Hyrule pendant ce temps ? pamiet1HEHE"
         ]
       },
       "of": {
-        "response": "https://onlyfans.com/duclems",
-        "description": "Lien vers OnlyFans"
+        "response": "https://onlyfans.com/duclems"
+      },
+      "sub": {
+        "response": "Pourquoi s'abonner ? Pour soutenir la chaîne et son contenu ! 100% de ce que je perçois est réinvesti dans la chaîne : émotes, matériel, amélioration du setup, etc. Votre support permet de continuer à créer du contenu de qualité ! duclemLove"
+      },
+      "rules": {
+        "response": "📋 RÈGLES DU CHAT : • Soyez gentil avec le streamer et les gens du chat • Pas d'autopromotion abusive ni de spam • Ne divulguez pas trop d'informations • Pas de « trauma dumping » • Ne parlez pas du Front d'AC • Respectez les conditions d'utilisation de Twitch"
+      },
+      "dons": {
+        "response": "https://streamelements.com/duclems/tip",
+        "hideFromList": true
+      },
+      "wishlist": {
+        "response": "Les subs et dons financent : BOTW / DLC ou emotes duclemLove",
+        "hideFromList": true
+      },
+      "gg": {
+        "response": "random",
+        "randomResponses": [
+          "duclemGG duclemLove duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula",
+          "duclemParty duclemGG duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove",
+          "duclemGG duclemParty duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula",
+          "duclemParty duclemGG duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemParty duclemGG duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemLove duclemParty duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemLove duclemParty duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemParty duclemLove duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemLove duclemParty duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemParty duclemLove duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemLove duclemParty duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemParty duclemLove duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemParty duclemLove duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemLove duclemParty duclemOula duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemLove duclemParty duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemGG duclemParty duclemOula duclemLove duclemGG duclemParty duclemOula duclemLove duclemGG",
+          "duclemParty duclemGG duclemLove duclemOula duclemGG duclemParty duclemOula duclemLove",
+          "duclemOula duclemGG duclemParty duclemLove duclemGG duclemLove duclemParty duclemOula duclemGG",
+          "duclemLove duclemGG duclemParty duclemOula duclemGG duclemLove duclemParty duclemOula duclemGG"
+        ],
+        "hideFromList": true
+      },
+      "galette": {
+        "response": "18/01/2026 Nono - 20/01/2026 Zuzu - 22/01/2026 Sakura - 24/01/2026 Rami"
+      },
+      "rami": {
+        "response": "Rami est une vraie queen aka la femme de Marina, ce qui veut dire que c'est une girly girl (Femelle pour les primates) ! duclemActually",
+        "hideFromList": true
+      },
+      "ramidouche": {
+        "response": "random",
+        "randomResponses": [
+          "Rami la crassouse va te laver le cul ma soeur ? duclemActually",
+          "Rami va te laver sa pue le caca ici"
+        ],
+        "hideFromList": true
+      },
+      "cassie": {
+        "response": "Rami est une vraie queen, ce qui veut dire que c'est une girly girl (Femelle pour les primates) ! duclemActually",
+        "hideFromList": true
       }
     },
     "moderator": {
       "so": {
         "response": "random",
-        "description": "Faire un shoutout à un utilisateur (modérateurs uniquement)",
         "requiresArgs": true,
         "randomResponses": [
           "Allez faire un tour chez $(args), c'est un(e) super streamer(euse) ! duclemLove",
