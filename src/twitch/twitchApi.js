@@ -480,6 +480,50 @@ class TwitchApi {
   }
 
   /**
+   * Crée un clip du stream en cours (broadcaster_id = utilisateur connecté)
+   * Capture ~90 s (85 s avant + 5 s après l'appel). Création asynchrone côté Twitch.
+   */
+  async createClip(hasDelay = false) {
+    if (!this.auth.isAuthenticated()) {
+      throw new Error('Non authentifié avec Twitch');
+    }
+    try {
+      const response = await axios.post(
+        `${this.baseUrl}/clips?broadcaster_id=${this.auth.userId}&has_delay=${hasDelay}`,
+        {},
+        { headers: this.auth.getAuthHeaders() }
+      );
+      const clip = response.data.data?.[0];
+      if (!clip) throw new Error('Réponse Twitch sans clip');
+      return {
+        id: clip.id,
+        edit_url: clip.edit_url,
+        url: `https://clips.twitch.tv/${clip.id}`
+      };
+    } catch (error) {
+      console.error('❌ Erreur création clip:', error.response?.data || error.message);
+      throw error;
+    }
+  }
+
+  /**
+   * Récupère les infos d'un clip (optionnel, pour vérifier qu'il est prêt)
+   */
+  async getClip(clipId) {
+    if (!this.auth.isAuthenticated()) throw new Error('Non authentifié avec Twitch');
+    try {
+      const response = await axios.get(
+        `${this.baseUrl}/clips?id=${clipId}`,
+        { headers: this.auth.getAuthHeaders() }
+      );
+      return response.data.data?.[0] || null;
+    } catch (error) {
+      console.error('❌ Erreur récupération clip:', error.response?.data || error.message);
+      return null;
+    }
+  }
+
+  /**
    * Envoie un message dans le chat via l'API Twitch
    */
   async sendChatMessage(message) {

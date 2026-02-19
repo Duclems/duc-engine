@@ -157,6 +157,10 @@
       }
     },
     "moderator": {
+      "clip": {
+        "response": "auto",
+        "hideFromList": true
+      },
       "so": {
         "response": "random",
         "requiresArgs": true,

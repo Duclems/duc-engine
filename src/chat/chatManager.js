@@ -107,6 +107,12 @@ class ChatManager {
         await this.handleAnnivCommand(username, displayName, args);
         return;
       }
+
+      // Gestion spéciale pour créer un clip (modérateurs / streamer uniquement)
+      if (lowerName === 'clip') {
+        await this.handleClipCommand(username, isModerator || isBroadcaster, args);
+        return;
+      }
       
       const command = this.commandManager.findCommand(commandName, isModerator || isBroadcaster);
       
@@ -385,6 +391,44 @@ class ChatManager {
         await this.twitchApi.sendChatMessage(`/me Désolé @${username}, une erreur est survenue lors de l'enregistrement de ta date d'anniversaire.`);
       } catch (err2) {
         console.log(chalk.red(`❌ Erreur envoi message !anniv erreur: ${err2.message}`));
+      }
+    }
+  }
+
+  /**
+   * Gestion de la commande !clip (création d'un clip du stream). Réservée aux modos / streamer.
+   * Titre suggéré : (argument ou nom du live) + " - " + pseudo. L'API Twitch ne permet pas de définir le titre à la création, on l'envoie dans le chat.
+   */
+  async handleClipCommand(username, isModOrBroadcaster, args) {
+    if (!isModOrBroadcaster) {
+      try {
+        await this.twitchApi.sendChatMessage(`/me @${username} la commande !clip est réservée aux modérateurs et au streamer.`);
+      } catch (e) {
+        console.log(chalk.gray('⚠️ Impossible d\'envoyer le message !clip (réservé modos)'));
+      }
+      return;
+    }
+    try {
+      let baseTitle = (args && args.trim()) ? args.trim() : null;
+      if (!baseTitle) {
+        try {
+          const channelInfo = await this.twitchApi.getChannelInfo();
+          baseTitle = channelInfo?.title || 'Clip';
+        } catch (e) {
+          baseTitle = 'Clip';
+        }
+      }
+      const suggestedTitle = `${baseTitle} - ${username}`;
+
+      const { id, url, edit_url } = await this.twitchApi.createClip();
+      const msg = `/me Clip créé par @${username} : ${url} — Titre suggéré : ${suggestedTitle}`;
+      await this.twitchApi.sendChatMessage(msg);
+      console.log(chalk.blue(`🎬 Clip créé par ${username}: ${url} (titre: ${suggestedTitle})`));
+    } catch (error) {
+      try {
+        await this.twitchApi.sendChatMessage('/me Erreur lors de la création du clip');
+      } catch (e) {
+        console.log(chalk.red(`❌ Erreur création clip: ${error.message}`));
       }
     }
   }

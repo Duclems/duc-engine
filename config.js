@@ -16,7 +16,8 @@ export const config = {
       'moderation:read',
       'user:write:chat',
       'moderator:manage:announcements',
-      'moderator:manage:shoutouts'
+      'moderator:manage:shoutouts',
+      'clips:edit'
     ]
   },
   // Configuration des timeouts et connexions
