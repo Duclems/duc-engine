@@ -108,6 +108,12 @@ class ChatManager {
         return;
       }
 
+      // Gestion spéciale pour le prochain anniversaire à venir
+      if (lowerName === 'prochainanniv') {
+        await this.handleProchainAnniv(username);
+        return;
+      }
+
       // Gestion spéciale pour créer un clip (modérateurs / streamer uniquement)
       if (lowerName === 'clip') {
         await this.handleClipCommand(username, isModerator || isBroadcaster, args);
@@ -303,6 +309,56 @@ class ChatManager {
         await this.twitchApi.sendChatMessage(`/me Désolé @${username}, une erreur est survenue lors de la récupération des anniversaires.`);
       } catch (err2) {
         console.log(chalk.red(`❌ Erreur envoi message !anniv erreur: ${err2.message}`));
+      }
+    }
+  }
+
+  /**
+   * Gestion de la commande !prochainanniv (prochain anniversaire à venir)
+   */
+  async handleProchainAnniv(username) {
+    try {
+      const all = await this.birthdayManager.load();
+      const records = Object.values(all || {}).filter(r => r && r.date);
+      if (records.length === 0) {
+        await this.twitchApi.sendChatMessage(`/me @${username} aucun anniversaire n'est enregistré.`);
+        return;
+      }
+
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const todayTime = today.getTime();
+
+      const withNext = records.map(r => {
+        const parts = r.date.split('/');
+        if (parts.length !== 3) return null;
+        const [d, m] = parts.map(Number);
+        if (!d || !m) return null;
+        let nextDate = new Date(today.getFullYear(), m - 1, d);
+        if (nextDate.getTime() < todayTime) {
+          nextDate = new Date(today.getFullYear() + 1, m - 1, d);
+        }
+        return { record: r, nextDate };
+      }).filter(Boolean);
+
+      if (withNext.length === 0) {
+        await this.twitchApi.sendChatMessage(`/me @${username} aucun anniversaire valide enregistré.`);
+        return;
+      }
+
+      withNext.sort((a, b) => a.nextDate.getTime() - b.nextDate.getTime());
+      const next = withNext[0];
+      const name = next.record.displayName || next.record.username;
+      const dd = String(next.nextDate.getDate()).padStart(2, '0');
+      const mm = String(next.nextDate.getMonth() + 1).padStart(2, '0');
+      const msg = `/me Le prochain anniversaire est celui de ${name} le ${dd}/${mm} 🎂`;
+      await this.twitchApi.sendChatMessage(msg);
+    } catch (error) {
+      console.log(chalk.red(`❌ Erreur gestion !prochainanniv: ${error.message}`));
+      try {
+        await this.twitchApi.sendChatMessage(`/me Désolé @${username}, une erreur est survenue.`);
+      } catch (err2) {
+        console.log(chalk.red(`❌ Erreur envoi message !prochainanniv: ${err2.message}`));
       }
     }
   }

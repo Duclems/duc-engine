@@ -36,6 +36,9 @@
       "monanniv": {
         "response": "auto"
       },
+      "prochainanniv": {
+        "response": "auto"
+      },
       "lurk": {
         "response": "random",
         "randomResponses": [
